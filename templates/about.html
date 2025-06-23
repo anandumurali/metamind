@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static%}
+<body {% block attribute %} class="bg-gray-100 min-h-screen flex flex-col" {%endblock%}>
+ {% block content %}
+      <section
+      class="flex-grow flex flex-col md:flex-row items-center justify-center px-10 py-20 bg-gray-800 rounded-xl m-[10px] shadow-md"
+    >
+      <div class="max-w-xl text-center md:text-left">
+        <h1 class="text-5xl font-bold text-blue-400 mb-6 text-center">About Us</h1>
+        <p class="text-gray-200 text-lg leading-relaxed mb-8">
+          At **Metamind**, we believe in building AI that truly understands. Our
+          mission is to create intelligent companions that don't just process
+          information, but also **perceive and respond to human emotions**.
+          We're revolutionizing the way people interact with technology by
+          infusing empathy into every digital conversation.
+        </p>
+      </div>
+      <div class="w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
+        <img
+          src="{% static 'images/about.png' %}"
+          alt="About Us Illustration"
+          class="rounded-xl shadow-lg transition duration-500 ease-in-out w-[90%] max-w-md"
+        />
+      </div>
+    </section>
+
+    <section
+      class="py-20 bg-white rounded-xl mx-[10px] mt-4 shadow-md text-center"
+    >
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 class="text-3xl font-semibold text-blue-600 mb-4 text-center">Our Vision</h3>
+            <p class="text-gray-600 leading-relaxed">
+              We envision a future where AI enhances human connection, providing
+              support, understanding, and meaningful interactions. Metamind aims
+              to be at the forefront of this revolution, making technology more
+              human-centric and accessible to everyone.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-3xl font-semibold text-blue-600 mb-4 text-center">What We Do</h3>
+            <p class="text-gray-600 leading-relaxed">
+              We develop cutting-edge AI models capable of **emotion detection**
+              through voice and text analysis. Our intelligent companions then
+              use this understanding to tailor their responses, providing
+              compassionate and relevant interactions. From customer service to
+              personal assistants, Metamind is designed to be your truly
+              intelligent and empathetic partner.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="flex justify-center gap-8 py-6 bg-white rounded-xl mx-[10px] mt-4 shadow"
+    >
+      <a
+        href="#"
+        target="_blank"
+        class="text-pink-600 hover:text-pink-500 text-3xl transition duration-300"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="#"
+        target="_blank"
+        class="text-red-600 hover:text-red-500 text-3xl transition duration-300"
+        ><i class="fab fa-youtube"></i
+      ></a>
+      <a
+        href="#"
+        target="_blank"
+        class="text-gray-800 hover:text-black text-3xl transition duration-300"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+ {%endblock%}
+  </body>
+</html>

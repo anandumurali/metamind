@@ -1,0 +1,120 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title%} {% endblock %}</title>
+  <link rel="icon" href="{% static 'images/logo.png' %}?v=1" type="image/png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=rosmatika@700&display=swap" rel="stylesheet" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    .logo-font {
+      font-family: "Rosmatika", sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body {% block attribute%} {% endblock %}>
+    <nav
+      class="bg-white rounded-xl m-[10px] px-6 py-4 flex justify-between items-center shadow-md"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="{% static 'images/logo.png' %}" 
+          alt="Metamind Logo"
+          class="h-10 w-10 rounded-full object-cover"
+        />
+        <span class="text-blue-600 text-2xl logo-font">Metamind</span>
+      </div>
+      <ul class="flex space-x-6 text-gray-700 font-bold">
+        <li>
+          <a href="{% url 'home' %}" class="hover:text-blue-600 flex items-center gap-1"
+            ><i class="fa fa-home"></i> Home</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'about' %}" class="hover:text-blue-600 flex items-center gap-1"
+            ><i class="fa fa-info-circle"></i> About Us</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'metamind' %}" class="hover:text-blue-600 flex items-center gap-1"
+            ><i class="fa fa-robot"></i> Metamind</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'services' %}" class="hover:text-blue-600 flex items-center gap-1"
+            ><i class="fa fa-wrench"></i> Services</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'contact' %}" class="hover:text-blue-600 flex items-center gap-1"
+            ><i class="fa fa-envelope"></i> Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+  {% block content%} {% endblock %}
+
+  <footer class="bg-blue-600 text-white pt-10 rounded-t-xl mt-4">
+    <div class="max-w-7xl mx-auto px-6 pb-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-3xl font-bold logo-font text-white mb-2">Metamind</h2>
+        <p class="text-blue-100 text-sm">
+          Your emotional AI companion—bridging empathy and intelligence through
+          smart interaction.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="{% url 'home' %}" class="hover:underline flex items-center gap-2"
+              ><i class="fa fa-home"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'about' %}" class="hover:underline flex items-center gap-2"
+              ><i class="fa fa-info-circle"></i> About Us</a>
+          </li>
+          <li>
+            <a href="{% url 'metamind' %}" class="hover:underline flex items-center gap-2"
+              ><i class="fa fa-robot"></i> Metamind</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'services' %}" class="hover:underline flex items-center gap-2"
+              ><i class="fa fa-wrench"></i> Services</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'contact' %}" class="hover:underline flex items-center gap-2"
+              ><i class="fa fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="bg-blue-800 text-sm text-center py-3 rounded-b-xl"
+    >
+      <p class="text-blue-100">&copy; 2025 <span class="logo-font">Metamind</span>. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
